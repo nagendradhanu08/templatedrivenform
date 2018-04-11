@@ -1,0 +1,22 @@
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)"> 
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="panel-title">create Employee</div>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="fullname">fullname</label>
+          <input id="fullname" name="fn" [(ngModel)]="fullname" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input id="email" name="email" [(ngModel)]="email" type="text" class="form-control">
+        </div>
+
+      </div>
+      <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+</form>
+Angular generated form module:{{employeeForm.value | json}}
